@@ -16,7 +16,11 @@ const App = () => {
   ]
 
   return (
-    users.map(user => <User user={user} key={user.id} />)
+    // users.map(user => <User user={user} key={user.id} />)
+    <>
+      <User user={users[0]} />
+      <User user={users[1]} />
+    </>
   )
 }
 
