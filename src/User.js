@@ -1,36 +1,15 @@
 import React, { useState } from 'react'
 
-const User = () => {
-  // 分割代入
+const User = (props) => {
   const [score, setScore] = useState(0)
-  // const score = 0
-  // const setScore = scoreを更新するための関数
 
-  // let score = 0
-  const handleClick = () => {
-    // score++
-    setScore(score + 1)
-  }
   return (
-    <>
-      <div>
-        <h1>名前：田之上</h1>
-        <p>特技：お昼寝</p>
-        <p>いいね！: {score}</p>
-        <button
-          type="button"
-          onClick={handleClick}
-        >
-          加算
-        </button>
-      </div>
-      <div>
-        <h1>名前：相馬</h1>
-        <p>特技：ない</p>
-        <p>いいね！: {score}</p>
-        <button type="button">加算</button>
-      </div>
-    </>
+    <div>
+      <h1>名前：{props.user.name}</h1>
+      <p>特技：{props.user.skill}</p>
+      <p>いいね！: {score}</p>
+      <button type="button" onClick={() => setScore(score+1)}>いいねボタン</button>
+    </div>
   )
 }
 
