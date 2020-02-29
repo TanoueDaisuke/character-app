@@ -5,22 +5,23 @@ const App = () => {
   const users = [
     {
       id: 1,
-      name: "田之上",
-      skill: "昼寝",
+      name: "カービィ",
+      skill: "吸い込み",
     }, 
     {
       id: 2,
-      name: "村人",
-      skill: "虫取り"
+      name: "マリオ",
+      skill: "ファイアーボール"
+    },
+    {
+      id: 3,
+      name: "ソニック",
+      skill: "ダッシュ"
     }
   ]
 
   return (
-    // users.map(user => <User user={user} key={user.id} />)
-    <>
-      <User user={users[0]} />
-      <User user={users[1]} />
-    </>
+    users.map(user => <User user={user} key={user.id} />)
   )
 }
 
